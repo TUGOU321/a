@@ -348,7 +348,7 @@ ul li {
   color: white;
   display: inline-block;
   width: 0.65rem;
-  text-align: center;
+   text-align: center;
   margin-right: 0.05rem;
   border-radius: 0.03rem;
 }
