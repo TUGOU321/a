@@ -1,11 +1,12 @@
 <template>
   <div>
     <div id="title">
-      <img @click="back()" src="../../../../static/img/back.png" alt>
+      <img @click="back()" src="../../../../static/img/back.png" alt />
       <span>搜索</span>
     </div>
     <div id="content">
-      <input id="input" type="text" placeholder="请输入商家或美食名称" v-model="msg">
+      <input id="input" type="text" placeholder="请输入商家或美食名称" v-model="msg" />
+      <span id="x" v-if="msg" @click="x()">x</span>
       <button @click="sub()" id="submit">提交</button>
     </div>
     <p id="p1" v-if="p1">很抱歉!无搜索结果</p>
@@ -13,7 +14,7 @@
       <ul>
         <li v-for="(item, index) in datas" :key="index">
           <router-link :to="'/shopdetail?shopId='+item.id" id="shop">
-            <img :src="'https://elm.cangdu.org/img/'+item.image_path" id="shopImg">
+            <img :src="'https://elm.cangdu.org/img/'+item.image_path" id="shopImg" />
             <p id="shopname">
               <span>品牌</span>
               <span>{{item.name}}</span>
@@ -22,8 +23,14 @@
               </span>
             </p>
             <p id="shopscore">
-               <van-rate size="0.15rem" v-model="item.rating" allow-half void-icon="star" void-color="#eee"/>
-            <span>{{item.rating}}</span>
+              <van-rate
+                size="0.15rem"
+                v-model="item.rating"
+                allow-half
+                void-icon="star"
+                void-color="#eee"
+              />
+              <span>{{item.rating}}</span>
               <span>月售{{item.recent_order_num}}单</span>
               <span>{{item.supports[1].name}}</span>
               <span>{{item.delivery_mode.text}}</span>
@@ -37,28 +44,29 @@
         </li>
       </ul>
     </div>
-    <ul  v-if="show">
-      <li v-for="(item, index) in record" :key="index" @click="code(index)">{{item}}
+    <ul v-if="show">
+      <span id="history">搜索历史</span>
+      <li v-for="(item, index) in record" :key="index" @click="code(index)">
+        {{item}}
         <span id="span" @click.stop="delet(index)">x</span>
       </li>
-      <p id="clear" @click="remove()">清空搜索历史</p>
+      <p id="clear" @click="remove()" v-if="record.length>0">清空搜索历史</p>
     </ul>
-    <div id="form"> 
+    <div id="form">
       <router-link to="/outFood">
-          <img  src="../../../../static/img/homeF.png"> 
+        <img src="../../../../static/img/homeF.png" />
       </router-link>
-      <router-link :to="'/search?show='+true">  
-        <img  src="../../../../static/img/searchT.png">
+      <router-link :to="'/search?show='+true">
+        <img src="../../../../static/img/searchT.png" />
       </router-link>
       <router-link to="/order">
-          <img  src="../../../../static/img/orderF.png">
+        <img src="../../../../static/img/orderF.png" />
       </router-link>
       <router-link to="/mine">
-          <img src="../../../../static/img/meF.png">
+        <img src="../../../../static/img/meF.png" />
       </router-link>
     </div>
   </div>
-  
 </template>
 
 <script>
@@ -73,17 +81,17 @@ export default {
       p1: false,
       p2: false,
       record: [],
-      longitude:[],
-      latitude:[],
+      longitude: [],
+      latitude: [],
       show: false,
-      lat:"",
-      lon:""
+      lat: "",
+      lon: ""
     };
   },
   created() {
     console.log(this.$store.state.latitude);
     console.log(this.$store.state.longitude);
-    this.lat= this.$store.state.latitude;
+    this.lat = this.$store.state.latitude;
     this.lon = this.$store.state.longitude;
     this.record = localStorage.value.split(",");
     this.latitude = localStorage.valuelatitude.split(",");
@@ -92,13 +100,33 @@ export default {
     this.show = this.$route.query.show;
     // console.log(this.show);
   },
+  watch: {
+    msg: function(N, O) {
+      if (O.length > N.length) {
+        this.p1 = false;
+        this.show = true;
+        this.record = localStorage.value.split(",");
+        this.latitude = localStorage.valuelatitude.split(",");
+        this.longitude = localStorage.valuelongitude.split(",");
+      }
+    }
+  },
   methods: {
-    delet(i){
-     this.record.splice(i,1);
+    x() {
+      this.msg = "";
+      this.p1 = false;
+      this.show = true;
+      this.record = localStorage.value.split(",");
+      this.latitude = localStorage.valuelatitude.split(",");
+      this.longitude = localStorage.valuelongitude.split(",");
     },
-    remove(){
+    delet(i) {
+      this.record.splice(i, 1);
+    },
+    remove() {
       localStorage.removeItem("value");
       this.record = [];
+      this.show = false;
     },
     code(i) {
       this.msg = this.record[i];
@@ -109,15 +137,15 @@ export default {
       this.$router.back();
     },
     sub() {
-      if (this.latitude.length==0) {
-        this.lat= this.$store.state.latitude;
-    this.lon = this.$store.state.longitude;
+      if (this.latitude.length == 0) {
+        this.lat = this.$store.state.latitude;
+        this.lon = this.$store.state.longitude;
       }
       const api =
         "https://elm.cangdu.org/v4/restaurants?geohash=" +
         this.lat +
         "," +
-        this.lon+
+        this.lon +
         "&keyword=" +
         this.msg;
       this.$http({
@@ -133,19 +161,18 @@ export default {
           this.p1 = false;
           this.p2 = true;
         }
-        if(this.msg.length>0){
-             if (localStorage.value) {
-               if(localStorage.value.indexOf(this.msg) == -1){
-                localStorage.value += "," + this.msg;
-                 localStorage.valuelatitude+=","+this.$store.state.latitude;
-          localStorage.valuelongitude += ","+this.$store.state.longitude;
-               }
-        } else {
-          localStorage.value = this.msg;
-          localStorage.valuelatitude=this.$store.state.latitude;
-          localStorage.valuelongitude = this.$store.state.longitude;
-        }
-  
+        if (this.msg.length > 0) {
+          if (localStorage.value) {
+            if (localStorage.value.indexOf(this.msg) == -1) {
+              localStorage.value += "," + this.msg;
+              localStorage.valuelatitude += "," + this.$store.state.latitude;
+              localStorage.valuelongitude += "," + this.$store.state.longitude;
+            }
+          } else {
+            localStorage.value = this.msg;
+            localStorage.valuelatitude = this.$store.state.latitude;
+            localStorage.valuelongitude = this.$store.state.longitude;
+          }
         }
         this.show = false;
         console.log(this.show);
@@ -155,7 +182,13 @@ export default {
 };
 </script>
 <style scoped>
-#form{
+#history {
+  display: inline-block;
+  padding: 0.1rem;
+  font-size: 0.14rem;
+  color: gray;
+}
+#form {
   border-top: 0.01rem solid gray;
   background-color: white;
   position: fixed;
@@ -167,14 +200,14 @@ export default {
 /* div{
   display: inline-block;
 } */
-#form img{
+#form img {
   width: 0.4rem;
   margin: 0.1rem 0.248rem;
 }
-#span{
+#span {
   float: right;
 }
-#clear{
+#clear {
   background-color: #fff;
   padding: 0.1rem;
   text-align: center;
@@ -187,6 +220,7 @@ export default {
   padding: 0.06rem;
   font-size: 0.15rem;
   margin-top: 0.06rem;
+  color: #3190e8;
 }
 #title {
   background-color: #3190e8;
@@ -202,14 +236,22 @@ export default {
   width: 0.15rem;
   float: left;
 }
-#title span{
+#title span {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 #content {
   background-color: #fff;
+  position: relative;
+}
+#x {
+  position: absolute;
+  top: 0.14rem;
+  right: 0.9rem;
+  color: #3190e8;
+  font-weight: bold;
 }
 #input {
   width: 2.8rem;
@@ -279,30 +321,30 @@ ul li {
 #shopscore > span {
   font-size: 0.14rem;
 }
-#shopscore>span:nth-child(2){
+#shopscore > span:nth-child(2) {
   position: absolute;
   left: 1rem;
   top: -0.02rem;
   color: orange;
 }
-#shopscore>span:nth-child(3){
+#shopscore > span:nth-child(3) {
   float: left;
 }
-#shopscore>span:nth-child(4){
+#shopscore > span:nth-child(4) {
   float: right;
   color: #3190e8;
   display: inline-block;
-  width:0.5rem;
+  width: 0.5rem;
   text-align: center;
   border: 0.01rem solid #3190e8;
   border-radius: 0.03rem;
 }
-#shopscore>span:nth-child(5){
+#shopscore > span:nth-child(5) {
   float: right;
   background-color: #3190e8;
   color: white;
   display: inline-block;
-  width:0.65rem;
+  width: 0.65rem;
   text-align: center;
   margin-right: 0.05rem;
   border-radius: 0.03rem;

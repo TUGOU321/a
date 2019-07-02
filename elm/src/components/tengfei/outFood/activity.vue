@@ -11,7 +11,6 @@
            <p v-if="this.datas.activities.length>0">
                <span>{{datas.activities[0].icon_name}}</span>
                <span>{{datas.activities[0].description}}</span>
-               
             </p>
            <p>
                <span> {{datas.supports[0].icon_name}}</span>
