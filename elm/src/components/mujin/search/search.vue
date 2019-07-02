@@ -336,7 +336,7 @@ ul li {
 #shopscore > span:nth-child(2) {
   position: absolute;
   left: 1rem;
-  top: -0.02rem;
+  top: -0.01rem;
   color: orange;
 }
 #shopscore > span:nth-child(3) {
