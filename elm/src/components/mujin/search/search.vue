@@ -22,12 +22,8 @@
               </span>
             </p>
             <p id="shopscore">
-              <van-rate
-  v-model="item.rating"
-  allow-half
-  void-icon="star"
-  void-color="#eee"
-/>
+               <van-rate size="0.15rem" v-model="item.rating" allow-half void-icon="star" void-color="#eee"/>
+            <span>{{item.rating}}</span>
               <span>月售{{item.recent_order_num}}单</span>
               <span>{{item.supports[1].name}}</span>
               <span>{{item.delivery_mode.text}}</span>
@@ -283,24 +279,30 @@ ul li {
 #shopscore > span {
   font-size: 0.14rem;
 }
-#shopscore > span:nth-child(2) {
+#shopscore>span:nth-child(2){
+  position: absolute;
+  left: 1rem;
+  top: -0.02rem;
+  color: orange;
+}
+#shopscore>span:nth-child(3){
   float: left;
 }
-#shopscore > span:nth-child(3) {
+#shopscore>span:nth-child(4){
   float: right;
   color: #3190e8;
   display: inline-block;
-  width: 0.5rem;
+  width:0.5rem;
   text-align: center;
   border: 0.01rem solid #3190e8;
   border-radius: 0.03rem;
 }
-#shopscore > span:nth-child(4) {
+#shopscore>span:nth-child(5){
   float: right;
   background-color: #3190e8;
   color: white;
   display: inline-block;
-  width: 0.65rem;
+  width:0.65rem;
   text-align: center;
   margin-right: 0.05rem;
   border-radius: 0.03rem;

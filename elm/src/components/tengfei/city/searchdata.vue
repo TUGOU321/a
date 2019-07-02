@@ -21,8 +21,8 @@
       },
       created(){
           this.datas=this.$route.query;
-          console.log(this.$route.query);
-        //   this.det();
+        //   console.log(this.$route.query);
+
       },
       methods: {
           det(a){

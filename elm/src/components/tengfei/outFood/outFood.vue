@@ -35,6 +35,8 @@
 </template>
 
 <script>
+import { Loading } from 'element-ui';
+let loadingInstance;
 export default {
   name: "outfood",
   data() {
@@ -52,7 +54,12 @@ export default {
     console.log(this.datas);
     this.getshop();
     this.getDetail();
-    
+    loadingInstance = Loading.service({
+            fullscreen:true,
+            background:"#F2F6FC",
+            text:"加载中...",
+            spinner:"el-icon-loading"
+        }); 
   },
   //挂在完成后触发 调用滚动方法
   mounted() {
@@ -104,6 +111,7 @@ export default {
       }).then(res => {
         console.log(res);
         this.allShop = res.data;
+        loadingInstance.close();
       });
     }
   }

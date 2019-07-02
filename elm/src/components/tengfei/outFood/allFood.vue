@@ -115,13 +115,16 @@
       </p>
       <span id="money1">￥{{$store.state.totalPrice}}</span>
       <span id="money2">配送费￥5</span>
-      <span class="money3" :class="{money4:$store.state.totalPrice>=20}">还差￥20起送</span>
+      <span class="money3">还差￥20起送</span>
+      <span class="money3" :class="{money4:$store.state.totalPrice>=20}" v-if="$store.state.totalPrice>=20">去结算</span>
     </div>
   </div>
 </template>
 
 <script>
 import { fail } from "assert";
+import { Loading } from 'element-ui';
+let loadingInstance;
 export default {
   name: "allFood",
   data() {
@@ -156,6 +159,12 @@ export default {
       this.getAll();
       // alert(1);
     // }
+    loadingInstance = Loading.service({
+            fullscreen:true,
+            background:"#F2F6FC",
+            text:"加载中...",
+            spinner:"el-icon-loading"
+        }); 
   },
   mounted() {
     // alert(1)
@@ -214,7 +223,6 @@ export default {
       this.$store.state.totalPrice += bc.specfoods[0].price;
       this.show = false;
       bc.is_featured++;
-      // console.log(this.a);
     },
     firstsure() {
       this.show1 = false;
@@ -265,16 +273,7 @@ export default {
         this.datas = res.data;
         this.$store.commit("foods", res.data);
         this.$store.commit("getcanguanId", this.shopId);
-        this.$nextTick(function() {
-          //挂在前监测手机屏幕高度
-          this.h =
-            document.documentElement.clientHeight || document.body.clientHeight;
-          //   console.log(this.h);
-          var shopcar = document.getElementById("shopcar");
-          this.h = shopcar.offsetHeight;
-          console.log(this.h);
-          this.divH = this.$route.query.divH;
-        });
+        loadingInstance.close();
       });
     },
     sty(i) {
@@ -707,6 +706,8 @@ export default {
   background-color: rgb(177, 175, 175);
 }
 .money4 {
+  width:1.25rem; 
   background-color: greenyellow;
+  text-align: center;
 }
 </style>

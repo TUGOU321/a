@@ -30,6 +30,7 @@
         <span>好评率 {{msg.satisfy_rate}}%</span>
       </p>
     </div>
+    
     <div class="boto">
       <p id="car"><img src="../../../../static/img/shopcar.png" alt=""></p>
       <span id="money1">￥</span>
