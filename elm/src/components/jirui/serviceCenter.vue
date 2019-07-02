@@ -16,13 +16,13 @@
         <div
           style="color:#666666;line-height:0.6rem;border-right:0.001rem #f2f2f2 solid;height:1rem;width:1.875rem;"
         >
-          <div style="color:orange;font-size:0.3rem;" class="el-icon-s-custom"></div>
+          <div style="color:orange;font-size:0.3rem;"><van-icon name="manager" /></div>
           <p>在线客服</p>
         </div>
         <div
           style="color:#666666;line-height:0.6rem;border-left:0.001rem #f2f2f2 solid;height:1rem;width:1.875rem;"
         >
-          <div style="color:green;font-size:0.3rem;" class="el-icon-phone"></div>
+          <div style="color:green;font-size:0.3rem;"><van-icon name="service" /></div>
           <p>在线客服</p>
         </div>
       </div>
@@ -39,8 +39,8 @@
           {{v}}
           <span
             style="font-weight:bold;padding-right:0.3rem;float:right;color:#666666;font-size:0.2rem;line-height:0.5rem;"
-            class="el-icon-arrow-right"
-          ></span>
+          
+          ><van-icon name="arrow" /></span>
         </li>
     </ul>
   </div>

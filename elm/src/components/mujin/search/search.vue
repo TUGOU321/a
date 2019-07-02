@@ -265,6 +265,9 @@ export default {
 #submit {
   background-color: #3190e8;
   color: white;
+  float: right;
+  margin-top: 0.08rem;
+  margin-right: 0.07rem;
   padding-left: 0.15rem;
   padding-right: 0.15rem;
   padding-top: 0.05rem;

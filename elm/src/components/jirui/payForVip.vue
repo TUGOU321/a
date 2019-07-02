@@ -22,8 +22,8 @@
       <div style="height:0.8rem;position: relative;">
         <span
           style="position: absolute;left:0.03rem;top:0;line-height:0.8rem;font-size:0.8rem;color:#3190e8;"
-          class="el-icon-coin"
-        ></span>
+         
+        ><van-icon name="alipay" /></span>
         <span
           style="position: absolute;left:0.83rem;top:0.35rem;font-size:0.2rem;color:#666666;"
         >支付宝</span>
@@ -32,8 +32,8 @@
       <div style="height:0.8rem;position: relative;">
         <span
           style="position: absolute;left:0.03rem;top:0;line-height:0.8rem;font-size:0.8rem;color:green;"
-          class="el-icon-coin"
-        ></span>
+         
+        ><van-icon name="wechat" /></span>
         <span
           style="position: absolute;left:0.83rem;top:0.35rem;height:0.5rem;;font-size:0.2rem;color:#666666;"
         >微信</span>

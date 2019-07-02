@@ -161,19 +161,23 @@ export default {
 }
 #wrap {
   width: 100%;
-  height: 100vh;
+  height: 78vh;
   overflow: hidden;
   overflow: scroll;
   overflow: auto;
+  float: left;
+  margin-top: 22.5vh;
 }
-::-webkit-scrollbar {
-  display: none;
-}
+
 .topin {
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
   width: 100%;
   border-top: 1px solid lightgray;
   box-sizing: border-box;
+  
+}
+::-webkit-scrollbar {
+  display: none;
 }
 .topin > div {
   float: left;

@@ -14,32 +14,32 @@
       </ul>
     </div>
     <div id="bc" v-if="show">
-                <div id="tips" v-if="show">
-                <p id="Fname">{{foodschoose.name}}</p>
-                <p
-                  v-show="foodschoose.specifications.length>0"
-                  id="Fguige"
-                >{{foodschoose.specifications[0].name}}</p>
-                <div v-if="foodschoose.specfoods" class="guige">
-                  <span
-                    class="sureone1"
-                    :class="{sureone2:show1}"
-                    @click.stop="firstsure()"
-                    v-if="foodschoose.specfoods[0].specs_name"
-                  >{{foodschoose.specfoods[0].specs_name}}</span>
-                  <span
-                    class="suretwo1"
-                    :class="{suretwo2:show2}"
-                    @click.stop="secondsure()"
-                    v-if="foodschoose.specfoods[1].specs_name"
-                  >{{foodschoose.specfoods[1].specs_name}}</span>
-                </div>
-                <p id="Fguige_last">
-                  <span>￥{{count}}</span>
-                  <span @click.stop="pushSome(foodschoose)">加入购物车</span>
-                </p>
-              </div>
-              </div>
+      <div id="tips" v-if="show">
+        <p id="Fname">{{foodschoose.name}}</p>
+        <p
+          v-show="foodschoose.specifications.length>0"
+          id="Fguige"
+        >{{foodschoose.specifications[0].name}}</p>
+        <div v-if="foodschoose.specfoods" class="guige">
+          <span
+            class="sureone1"
+            :class="{sureone2:show1}"
+            @click.stop="firstsure()"
+            v-if="foodschoose.specfoods[0].specs_name"
+          >{{foodschoose.specfoods[0].specs_name}}</span>
+          <span
+            class="suretwo1"
+            :class="{suretwo2:show2}"
+            @click.stop="secondsure()"
+            v-if="foodschoose.specfoods[1].specs_name"
+          >{{foodschoose.specfoods[1].specs_name}}</span>
+        </div>
+        <p id="Fguige_last">
+          <span>￥{{count}}</span>
+          <span @click.stop="pushSome(foodschoose)">加入购物车</span>
+        </p>
+      </div>
+    </div>
     <div id="right" :style="{'height':divH+'px'}">
       <ul>
         <li v-for="(items, i) in datas" :key="i">
@@ -116,14 +116,18 @@
       <span id="money1">￥{{$store.state.totalPrice}}</span>
       <span id="money2">配送费￥5</span>
       <span class="money3">还差￥20起送</span>
-      <span class="money3" :class="{money4:$store.state.totalPrice>=20}" v-if="$store.state.totalPrice>=20">去结算</span>
+      <span
+        class="money3"
+        :class="{money4:$store.state.totalPrice>=20}"
+        v-if="$store.state.totalPrice>=20"
+      >去结算</span>
     </div>
   </div>
 </template>
 
 <script>
 import { fail } from "assert";
-import { Loading } from 'element-ui';
+import { Loading } from "element-ui";
 let loadingInstance;
 export default {
   name: "allFood",
@@ -156,15 +160,15 @@ export default {
     this.shopId = this.$route.query.shopId;
     //  &&
     // if (this.num === 0) {
-      this.getAll();
-      // alert(1);
+    this.getAll();
+    // alert(1);
     // }
     loadingInstance = Loading.service({
-            fullscreen:true,
-            background:"#F2F6FC",
-            text:"加载中...",
-            spinner:"el-icon-loading"
-        }); 
+      fullscreen: true,
+      background: "#F2F6FC",
+      text: "加载中...",
+      spinner: "el-icon-loading"
+    });
   },
   mounted() {
     // alert(1)
@@ -283,7 +287,7 @@ export default {
 };
 </script>
 <style scoped>
-#bc{
+#bc {
   width: 3.75rem;
   height: 70.4vh;
   background-color: rgba(0, 0, 0, 0.3);
@@ -457,12 +461,13 @@ export default {
 #tips {
   width: 2rem;
   background-color: white;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 113;
+  padding-top: 0.1rem;
 }
 #Fname {
   width: 2rem;
@@ -706,7 +711,7 @@ export default {
   background-color: rgb(177, 175, 175);
 }
 .money4 {
-  width:1.25rem; 
+  width: 1.25rem;
   background-color: greenyellow;
   text-align: center;
 }

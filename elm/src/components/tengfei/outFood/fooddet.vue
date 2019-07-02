@@ -50,7 +50,6 @@ export default {
     };
   },
   created() {
-    console.log(this.$route.query);
     this.msg = this.$route.query;
   },
   methods: {

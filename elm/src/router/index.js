@@ -7,7 +7,6 @@ import Searchold from '@/components/tengfei/city/searchold'
 import Home from '@/components/tengfei/home/home'
 import Login from '@/components/tengfei/login/login'
 import Reset from '@/components/tengfei/login/reset'
-import My from '@/components/tengfei/home/my'
 import OutFood from '@/components/tengfei/outFood/outfood'
 import Shopdetail from '@/components/tengfei/outFood/shopdetail'
 import AllFood from '@/components/tengfei/outFood/allFood'
@@ -16,7 +15,6 @@ import Activity from '@/components/tengfei/outFood/activity'
 import Fooddet from '@/components/tengfei/outFood/fooddet'
 import Order from '@/components/mujin/order/order'
 import Search from '@/components/mujin/search/search'
-import Title from '@/components/tengfei/outFood/title'
 import Outfood from '@/components/mujin/lunbo/outfood'
 import SearchAddress from '@/components/jirui/searchAddress'
 import Mine from '@/components/jirui/mine'
@@ -294,11 +292,6 @@ export default new Router({
       path: '/fooddet',
       name:"fooddet",
       component: Fooddet
-    },
-    {
-      path: '/my',
-      name:"my",
-      component: My
     },
     {
       path: '/login',

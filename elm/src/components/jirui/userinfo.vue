@@ -34,8 +34,8 @@
       >头像</span>
       <span
         style="color:#B0C4DE;float:right;line-height: 0.8rem;font-size:0.2rem;"
-        class="el-icon-arrow-right"
-      ></span>
+        
+      ><van-icon name="arrow" /></span>
     </nav>
 
     <nav style="margin-top:0.02rem;background-color:white;margin-bottom:0.02rem;height:0.5rem;">
@@ -44,9 +44,9 @@
           style="line-height:0.5rem;padding-left:0.15rem;padding-top: 0.1rem;padding-bottom: 0.1rem;font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.14rem;"
         >用户名</span>
         <span
-          style="color:#B0C4DE;float:right;line-height: 0.5rem;font-size:0.2rem;"
-          class="el-icon-arrow-right"
-        ></span>
+          style="color:#B0C4DE;float:right;line-height: 0.54rem;font-size:0.2rem;"
+          
+        ><van-icon name="arrow" /></span>
       </router-link>
     </nav>
     <router-link to="editaddress">
@@ -55,9 +55,9 @@
           style="line-height:0.5rem;padding-left:0.15rem;padding-top: 0.1rem;padding-bottom: 0.1rem;font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.14rem;"
         >收货地址</span>
         <span
-          style="color:#B0C4DE;float:right;line-height: 0.5rem;font-size:0.2rem;"
-          class="el-icon-arrow-right"
-        ></span>
+          style="color:#B0C4DE;float:right;line-height: 0.54rem;font-size:0.2rem;"
+          
+        ><van-icon name="arrow" /></span>
       </nav>
     </router-link>
     <nav style="background-color:#F2F2F2;margin-bottom:0.02rem;height:0.35rem;">
@@ -75,9 +75,9 @@
         style="line-height:0.5rem;padding-top: 0.1rem;padding-bottom: 0.1rem;font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.14rem;"
       >手机</span>
       <span
-        style="color:#B0C4DE;float:right;line-height: 0.5rem;font-size:0.2rem;"
-        class="el-icon-arrow-right"
-      ></span>
+        style="color:#B0C4DE;float:right;line-height: 0.54rem;font-size:0.2rem;"
+        
+      ><van-icon name="arrow" /></span>
     </nav>
     <nav style="background-color:#f2f2f2;margin-bottom:0.02rem;height:  0.35rem;">
       <span
@@ -90,9 +90,9 @@
           style="line-height:0.5rem;padding-left:0.15rem;padding-top: 0.1rem;padding-bottom: 0.1rem;font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.14rem;"
         >登录密码</span>
         <span
-          style="color:#B0C4DE;float:right;line-height: 0.5rem;font-size:0.2rem;"
-          class="el-icon-arrow-right"
-        ></span>
+          style="color:#B0C4DE;float:right;line-height: 0.54rem;font-size:0.2rem;"
+         
+        ><van-icon name="arrow" /></span>
       </nav>
     </router-link>
     <el-row>
