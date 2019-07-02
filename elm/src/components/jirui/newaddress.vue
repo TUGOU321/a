@@ -5,10 +5,7 @@
     >
       <span class="leftspan">
         <router-link to="editaddress">
-         <i 
-            class="el-icon-arrow-left"
-            style="color:white;font-size:0.3rem;width: 13%;line-height: 0.5rem;float: left;"
-          ></i>
+         <van-icon @click="goback()" name="arrow-left"  style="font-size:0.3rem;width: 13%;line-height: 0.5rem;float: left;" color="white" />
           </router-link>
       </span>
       <p

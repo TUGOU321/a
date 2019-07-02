@@ -3,11 +3,7 @@
     <div class="flexhere">
       <nav>
         <span class="leftspan">
-          <i
-            @click="goback"
-            class="el-icon-arrow-left"
-            style="line-height:0.5rem;width: 13%;float: left;color:white;font-size:0.3rem;"
-          ></i>
+          <van-icon @click="goback()" name="arrow-left"  style="font-size:0.3rem;width: 13%;line-height: 0.5rem;float: left;" color="white" />
         </span>
         <p class="tittle">{{city_Name}}</p>
         <span class="changeCity">切换城市</span>

@@ -16,12 +16,8 @@
             </span>
           </p>
           <p id="shopscore">
-            <van-rate
-  v-model="item.rating"
-  allow-half
-  void-icon="star" 
-  void-color="#eee"
-/>
+            <van-rate size="0.15rem" v-model="item.rating" allow-half void-icon="star" void-color="#eee"/>
+            <span>{{item.rating}}</span>
             <span>月售{{item.recent_order_num}}单</span>
             <span>{{item.supports[1].name}}</span>
             <span>{{item.delivery_mode.text}}</span>
@@ -32,7 +28,6 @@
             <span>{{item.distance}}/</span>
           </p>
           </router-link>
-          
         </li>
       </ul>
     </div>
@@ -180,20 +175,26 @@ ul li {
     font-size:0.14rem; 
 }
 #shopscore>span:nth-child(2){
-  float: left;
+  position: absolute;
+  left: 1rem;
+  top: -0.02rem;
+  color: orange;
 }
 #shopscore>span:nth-child(3){
-  float: right;
-  color: blue;
-  display: inline-block;
-  width:0.5rem;
-  text-align: center;
-  border: 0.01rem solid blue;
-  border-radius: 0.03rem;
+  float: left;
 }
 #shopscore>span:nth-child(4){
   float: right;
-  background-color: blue;
+  color: #3190e8;
+  display: inline-block;
+  width:0.5rem;
+  text-align: center;
+  border: 0.01rem solid #3190e8;
+  border-radius: 0.03rem;
+}
+#shopscore>span:nth-child(5){
+  float: right;
+  background-color: #3190e8;
   color: white;
   display: inline-block;
   width:0.65rem;
@@ -213,6 +214,6 @@ ul li {
   float: right;
 }
 #shopmoney>span:nth-last-child(2){
-  color: blue;
+  color: #3190e8;
 }
 </style>

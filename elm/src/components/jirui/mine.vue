@@ -6,10 +6,12 @@
       <span class="leftspan">
         <span class="leftspan">
           <router-link to="">
-            <i @click="back()"
+            <!-- <img src="../../../static/img/back.png" style="color:red;font-size:0.3rem;width: 10%;line-height: 0.5rem;float: left;"> -->
+            <van-icon @click="back()" name="arrow-left"  style="font-size:0.3rem;width: 13%;line-height: 0.5rem;float: left;" color="white" />
+            <!-- <i @click="back()"
               class="el-icon-arrow-left"
               style="color:white;font-size:0.3rem;width: 13%;line-height: 0.5rem;float: left;"
-            ></i>
+            ></i> -->
           </router-link>
         </span>
       </span>
@@ -108,71 +110,85 @@
         </router-link>
       </div>
     </div>
-    <nav style="background-color:white;margin-bottom:0.01rem;">
-      <i
-        style="padding-left:0.15rem;padding-top: 0.1rem;padding-bottom: 0.1rem;color:#666666;font-size:0.18rem;"
-        class="el-icon-tickets"
-      ></i>
-      <span @click="order()" style="font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.16rem;">我的订单</span>
-      <span
-        style="color:#B0C4DE;float:right;line-height: 0.35rem;font-size:0.2rem;"
-        class="el-icon-arrow-right"
-      ></span>
-    </nav>
-    <nav @click="open" style="background-color:white;margin-bottom:0.01rem;">
-      <i
-        style="padding-left:0.15rem;padding-top: 0.1rem;padding-bottom: 0.1rem;color:#ff5f3E;font-size:0.18rem;"
-        class="el-icon-s-shop"
-      ></i>
-      <span style="font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.16rem;">积分商店</span>
-      <span
-        style="color:#B0C4DE;float:right;line-height: 0.35rem;font-size:0.2rem;"
-        class="el-icon-arrow-right"
-      ></span>
-    </nav>
-    <router-link to="vipCenter">
-      <nav style="background-color:white;margin-bottom:0.15rem;">
-        <i
-          style="padding-left:0.15rem;padding-top: 0.1rem;padding-bottom: 0.1rem;color:#FF9900;font-size:0.18rem;"
+    <nav style="height:0.4rem;position: relative;background-color:white;margin-bottom:0.01rem;">
+        <!-- <i
+          style="padding-left:0.15rem;padding-top: 0.1rem;padding-bottom: 0.1rem;color:#3190e8;font-size:0.16rem;"
           class="el-icon-platform-eleme"
-        ></i>
-        <span
-          style="font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.16rem;"
-        >饿了么会员卡</span>
-        <span
-          style="color:#B0C4DE;float:right;line-height: 0.35rem;font-size:0.2rem;"
+        ></i> -->
+        <img src="../../../static/img/orderF.png" style="position: absolute;left:0.15rem;height:0.2rem;padding-top: 0.1rem;padding-bottom: 0.1rem;padding-right:0;color:#3190e8;font-size:0.2rem;" name="weapp-nav" />
+        <div
+          style="position: absolute;left:0.4rem;heidht:0.2rem;line-height:0.4rem;font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.16rem;"
+        >我的订单</div>
+        <van-icon color="gray" style="position: absolute;right:0.15rem;line-height:0.4rem;color:gray;float:right;font-size:0.2rem;" name="arrow" />
+        <!-- <span
+          style="color:gray;float:right;line-height: 0.35rem;font-size:0.2rem;"
           class="el-icon-arrow-right"
-        ></span>
+        ></span> -->
+      </nav>
+    <nav @click="open" style="height:0.4rem;position: relative;background-color:white;margin-bottom:0.01rem;">
+        <!-- <i
+          style="padding-left:0.15rem;padding-top: 0.1rem;padding-bottom: 0.1rem;color:#3190e8;font-size:0.16rem;"
+          class="el-icon-platform-eleme"
+        ></i> -->
+        <img src="../../../static/img/tese.png" style="position: absolute;left:0.15rem;height:0.2rem;padding-top: 0.1rem;padding-bottom: 0.1rem;padding-right:0;color:#3190e8;font-size:0.2rem;" name="weapp-nav" />
+        <div
+          style="position: absolute;left:0.4rem;heidht:0.2rem;line-height:0.4rem;font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.16rem;"
+        >积分商城</div>
+        <van-icon color="gray" style="position: absolute;right:0.15rem;line-height:0.4rem;color:gray;float:right;font-size:0.2rem;" name="arrow" />
+        <!-- <span
+          style="color:gray;float:right;line-height: 0.35rem;font-size:0.2rem;"
+          class="el-icon-arrow-right"
+        ></span> -->
+      </nav>
+    <router-link to="vipCenter">
+      <nav style="height:0.4rem;position: relative;background-color:white;margin-bottom:0.15rem;">
+        <!-- <i
+          style="padding-left:0.15rem;padding-top: 0.1rem;padding-bottom: 0.1rem;color:#3190e8;font-size:0.16rem;"
+          class="el-icon-platform-eleme"
+        ></i> -->
+        <img src="../../../static/img/huangguan.png" style="position: absolute;left:0.15rem;height:0.2rem;padding-top: 0.1rem;padding-bottom: 0.1rem;padding-right:0;color:#3190e8;font-size:0.2rem;" name="weapp-nav" />
+        <div
+          style="position: absolute;left:0.4rem;heidht:0.2rem;line-height:0.4rem;font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.16rem;"
+        >会员中心</div>
+        <van-icon color="gray" style="position: absolute;right:0.15rem;line-height:0.4rem;color:gray;float:right;font-size:0.2rem;" name="arrow" />
+        <!-- <span
+          style="color:gray;float:right;line-height: 0.35rem;font-size:0.2rem;"
+          class="el-icon-arrow-right"
+        ></span> -->
       </nav>
     </router-link>
     <router-link to="serviceCenter">
-      <nav style="background-color:white;margin-bottom:0.01rem;">
-        <i
+      <nav style="height:0.4rem;position: relative;background-color:white;margin-bottom:0.01rem;">
+        <!-- <i
           style="padding-left:0.15rem;padding-top: 0.1rem;padding-bottom: 0.1rem;color:#3190e8;font-size:0.16rem;"
-          class="el-icon-s-claim"
-        ></i>
-        <span
-          style="font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.16rem;"
-        >服务中心</span>
-        <span
-          style="color:#B0C4DE;float:right;line-height: 0.35rem;font-size:0.2rem;"
+          class="el-icon-platform-eleme"
+        ></i> -->
+        <img src="../../../static/img/bao.png" style="position: absolute;left:0.15rem;height:0.2rem;padding-top: 0.1rem;padding-bottom: 0.1rem;padding-right:0;color:#3190e8;font-size:0.2rem;" name="weapp-nav" />
+        <div
+          style="position: absolute;left:0.4rem;heidht:0.2rem;line-height:0.4rem;font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.16rem;"
+        >服务中心</div>
+        <van-icon color="gray" style="position: absolute;right:0.15rem;line-height:0.4rem;color:gray;float:right;font-size:0.2rem;" name="arrow" />
+        <!-- <span
+          style="color:gray;float:right;line-height: 0.35rem;font-size:0.2rem;"
           class="el-icon-arrow-right"
-        ></span>
+        ></span> -->
       </nav>
     </router-link>
     <router-link to="downloadApp">
-      <nav style="background-color:white;margin-bottom:0.01rem;">
-        <i
+      <nav style="height:0.4rem;position: relative;background-color:white;margin-bottom:0.01rem;">
+        <!-- <i
           style="padding-left:0.15rem;padding-top: 0.1rem;padding-bottom: 0.1rem;color:#3190e8;font-size:0.16rem;"
           class="el-icon-platform-eleme"
-        ></i>
-        <span
-          style="font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.16rem;"
-        >下载饿了么app</span>
-        <span
+        ></i> -->
+        <img src="../../../static/img/eliaomo.png" style="position: absolute;left:0.15rem;height:0.2rem;padding-top: 0.1rem;padding-bottom: 0.1rem;padding-right:0;color:#3190e8;font-size:0.2rem;" name="weapp-nav" />
+        <div
+          style="position: absolute;left:0.4rem;heidht:0.2rem;line-height:0.4rem;font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.16rem;"
+        >下载饿了么app</div>
+        <van-icon color="gray" style="position: absolute;right:0.15rem;line-height:0.4rem;color:gray;float:right;font-size:0.2rem;" name="arrow" />
+        <!-- <span
           style="color:gray;float:right;line-height: 0.35rem;font-size:0.2rem;"
           class="el-icon-arrow-right"
-        ></span>
+        ></span> -->
       </nav>
     </router-link>
     <div>{{test}}</div>

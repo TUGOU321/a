@@ -1,5 +1,6 @@
 <template>
-  <div id="wrap">
+  <div>
+    <div id="wrap">
     <div class="topin">
       <div class="to-left">
         <p>{{allrates}}</p>
@@ -13,14 +14,18 @@
         <div>
           <span>服务态度:</span>
           <span>
-            <van-rate v-model="server" allow-half  void-icon="star"  void-color="#eee"/>
+            <van-rate v-model="server" size="0.15rem" allow-half  void-icon="star"  void-color="#eee"/>
+            
           </span>
+          <span class="star">{{server}}</span>
         </div>
         <div>
           <span>菜品评价:</span>
           <span>
-            <van-rate v-model="server" allow-half  void-icon="star"  void-color="#eee"/>
+            <van-rate v-model="server" size="0.15rem" allow-half  void-icon="star"  void-color="#eee"/>
+            
           </span>
+          <span class="star">{{server}}</span>
         </div>
         <div>
           <span>送达时间 {{deliver}} 分钟</span>
@@ -46,7 +51,7 @@
         <div class="ping-mid">
           <p>{{v.username}}</p>
           <p class="stars">
-            <van-rate v-model="server" allow-half  void-icon="star"  void-color="#eee"/>
+            <van-rate v-model="server" allow-half  void-icon="star" size="0.15rem"  void-color="#eee"/>
             <span v-if="v.time_spent_desc">{{v.time_spent_desc}}</span>
           </p>
           <div class="midimg" v-if="v.item_ratings">
@@ -76,6 +81,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -143,21 +149,25 @@ export default {
                
             })
         }
-    },
-    computed: {
-        shaixuan(){
-            
-        }
-    },
+    }
 }
 </script>
 
 <style scoped>
+.star{
+  float: right;
+  margin-left: 0.1rem;
+  color: orange;
+}
 #wrap {
   width: 100%;
-  /* height: 100vh;  */
-  /* overflow: hidden; */
-  /* overflow-y: scroll; */
+  height: 100vh;
+  overflow: hidden;
+  overflow: scroll;
+  overflow: auto;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 .topin {
   margin-top: 1.5rem;

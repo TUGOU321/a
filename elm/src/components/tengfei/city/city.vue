@@ -134,7 +134,7 @@ export default {
         background-color: lightgray;
     }
     #title{
-        background-color: blue;
+        background-color: #3190e8;
         padding: 0.15rem 0.08rem;
         overflow: hidden;
     }
@@ -167,7 +167,7 @@ export default {
         font-weight: bold;
     }
     #guess{
-        color: blue;
+        color: #3190e8;
         font-size: 0.18rem;
         padding: 0.1rem 0.08rem;
         border-top: 0.01rem solid gray;
@@ -191,7 +191,7 @@ export default {
         float: left;
         width: 0.929rem;
         height: 0.35rem;
-        color: blue;
+        color: #3190e8;
         font-size: 0.15rem;
         text-align: center;
         line-height: 0.35rem;

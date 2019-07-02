@@ -135,7 +135,7 @@ export default {
   margin: 0.1rem 0.248rem;
 }
 #title {
-  background-color: blue;
+  background-color: #3190e8;
   padding: 0.1rem 0.08rem;
   overflow: hidden;
   width: 3.59rem;

@@ -1,7 +1,7 @@
 <template>
   <div id="wrap">
-    <div id="top" @click="back()">
-      <span style="color:#f2f2f2; line-height:0.5rem;font-size:0.3rem;" class="el-icon-arrow-left"></span>
+    <div id="top">
+       <van-icon @click="goback()" name="arrow-left"  style="font-size:0.3rem;width: 13%;line-height: 0.5rem;float: left;" color="white" />
       <p>推荐有奖</p>
     </div>
     <div id="img1">
@@ -65,7 +65,7 @@ export default {
     falsetool1() {
       this.outshow1 = false;
     },
-    back() {
+    goback() {
       this.$router.back();
     }
   }

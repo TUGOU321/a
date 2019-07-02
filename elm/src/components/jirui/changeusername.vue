@@ -4,10 +4,7 @@
       style="width: 100%; height: 0.5rem;font-size: 0.175rem;line-height: 0.5rem;background-color: #3190e8;color: #ffffff;text-align: center;"
     >
       <span class="leftspan">
-          <i @click="goback()"
-            class="el-icon-arrow-left"
-            style="color:white;font-size:0.3rem;width: 13%;line-height: 0.5rem;float: left;"
-          ></i>
+          <van-icon @click="goback()" name="arrow-left"  style="font-size:0.3rem;width: 13%;line-height: 0.5rem;float: left;" color="white" />
       </span>
       <p
         class="tittle"

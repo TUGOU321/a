@@ -15,7 +15,7 @@
       <p class="score">
         <span>评分</span>
        <van-rate
-  v-model="msg.rating"
+  v-model="msg.rating" size="0.15rem"
   allow-half
   void-icon="star"
   void-color="#eee"
@@ -71,8 +71,14 @@ export default {
   background-color: rgb(49, 143, 231);
   line-height: 0.5rem;
   font-size: 0.18rem;
-  text-align: center;
   color: white;
+  position: relative;
+}
+.top>span:nth-child(2){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
 .top img {
   float: left;

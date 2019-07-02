@@ -239,7 +239,7 @@ export default {
   margin-top: 0.8rem;
 }
 #title {
-  background-color: blue;
+  background-color: #3190e8;
   padding: 0.1rem 0.08rem;
   overflow: hidden;
   position: fixed;
@@ -367,16 +367,16 @@ ul li {
 }
 #shopscore > span:nth-child(3) {
   float: right;
-  color: blue;
+  color: #3190e8;
   display: inline-block;
   width: 0.5rem;
   text-align: center;
-  border: 0.01rem solid blue;
+  border: 0.01rem solid #3190e8;
   border-radius: 0.03rem;
 }
 #shopscore > span:nth-child(4) {
   float: right;
-  background-color: blue;
+  background-color: #3190e8;
   color: white;
   display: inline-block;
   width: 0.65rem;
@@ -397,6 +397,6 @@ ul li {
   float: right;
 }
 #shopmoney > span:nth-last-child(2) {
-  color: blue;
+  color: #3190e8;
 }
 </style>

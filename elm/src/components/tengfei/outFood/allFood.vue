@@ -13,6 +13,33 @@
         </li>
       </ul>
     </div>
+    <div id="bc" v-if="show">
+                <div id="tips" v-if="show">
+                <p id="Fname">{{foodschoose.name}}</p>
+                <p
+                  v-show="foodschoose.specifications.length>0"
+                  id="Fguige"
+                >{{foodschoose.specifications[0].name}}</p>
+                <div v-if="foodschoose.specfoods" class="guige">
+                  <span
+                    class="sureone1"
+                    :class="{sureone2:show1}"
+                    @click.stop="firstsure()"
+                    v-if="foodschoose.specfoods[0].specs_name"
+                  >{{foodschoose.specfoods[0].specs_name}}</span>
+                  <span
+                    class="suretwo1"
+                    :class="{suretwo2:show2}"
+                    @click.stop="secondsure()"
+                    v-if="foodschoose.specfoods[1].specs_name"
+                  >{{foodschoose.specfoods[1].specs_name}}</span>
+                </div>
+                <p id="Fguige_last">
+                  <span>￥{{count}}</span>
+                  <span @click.stop="pushSome(foodschoose)">加入购物车</span>
+                </p>
+              </div>
+              </div>
     <div id="right" :style="{'height':divH+'px'}">
       <ul>
         <li v-for="(items, i) in datas" :key="i">
@@ -59,32 +86,6 @@
                   id="featured2"
                 >{{item.is_featured}}</span>
                 <p v-if="!item.specfoods[1]" id="add" @click.stop="add1(i,j)">+</p>
-              </div>
-              <!-- 弹窗 -->
-              <div id="tips" v-if="show">
-                <p id="Fname">{{foodschoose.name}}</p>
-                <p
-                  v-show="foodschoose.specifications.length>0"
-                  id="Fguige"
-                >{{foodschoose.specifications[0].name}}</p>
-                <div v-if="foodschoose.specfoods" class="guige">
-                  <span
-                    class="sureone1"
-                    :class="{sureone2:show1}"
-                    @click.stop="firstsure()"
-                    v-if="foodschoose.specfoods[0].specs_name"
-                  >{{foodschoose.specfoods[0].specs_name}}</span>
-                  <span
-                    class="suretwo1"
-                    :class="{suretwo2:show2}"
-                    @click.stop="secondsure()"
-                    v-if="foodschoose.specfoods[1].specs_name"
-                  >{{foodschoose.specfoods[1].specs_name}}</span>
-                </div>
-                <p id="Fguige_last">
-                  <span>￥{{count}}</span>
-                  <span @click.stop="pushSome(foodschoose)">加入购物车</span>
-                </p>
               </div>
             </li>
           </ul>
@@ -213,7 +214,7 @@ export default {
       this.$store.state.totalPrice += bc.specfoods[0].price;
       this.show = false;
       bc.is_featured++;
-      console.log(this.a);
+      // console.log(this.a);
     },
     firstsure() {
       this.show1 = false;
@@ -283,6 +284,14 @@ export default {
 };
 </script>
 <style scoped>
+#bc{
+  width: 3.75rem;
+  height: 70.4vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
+  top: 22vh;
+}
 #ul3 {
   overflow: hidden;
 }
@@ -302,10 +311,10 @@ export default {
   display: inline-block;
   width: 0.2rem;
   height: 0.2rem;
-  color: blue;
+  color: #3190e8;
   border-radius: 50%;
   font-size: 0.16rem;
-  border: 0.01rem solid blue;
+  border: 0.01rem solid #3190e8;
   text-align: center;
   line-height: 0.2rem;
   margin-right: 0.05rem;
@@ -315,7 +324,7 @@ export default {
   width: 0.2rem;
   height: 0.2rem;
   border-radius: 50%;
-  background-color: blue;
+  background-color: #3190e8;
   text-align: center;
   line-height: 0.2rem;
   color: #fff;
@@ -368,7 +377,7 @@ export default {
   bottom: 0.1rem;
   right: 1rem;
   color: white;
-  background-color: blue;
+  background-color: #3190e8;
 }
 .span1 {
   text-align: center;
@@ -392,15 +401,15 @@ export default {
 .sureone1 {
   display: inline-block;
   border: 1px solid rgb(220, 220, 220);
-  color: rgb(49, 143, 231);
+  color: #3190e8;
   padding: 0.05rem;
   margin-right: 0.05rem;
   border-radius: 0.05rem;
 }
 .suretwo2 {
   display: inline-block;
-  border: 1px solid rgb(49, 143, 231);
-  color: rgb(49, 143, 231);
+  border: 1px solid #3190e8;
+  color: #3190e8;
   padding: 0.05rem;
   margin-right: 0.05rem;
   border-radius: 0.05rem;
@@ -481,7 +490,7 @@ export default {
   color: red;
 }
 #Fguige_last > span:nth-child(2) {
-  background-color: blue;
+  background-color: #3190e8;
   padding: 0.05rem;
   margin-left: 0.5rem;
   color: #fff;
@@ -500,12 +509,12 @@ export default {
 }
 #left {
   float: left;
-  margin-top: 1.45rem;
+  margin-top: 22vh;
   width: 0.9rem;
+  height: 70.4vh;
   overflow: hidden;
   overflow: scroll;
   overflow: auto;
-  /* height: 4.7rem; */
   background-color: lightgray;
 }
 #left ul li {
@@ -618,7 +627,7 @@ export default {
   bottom: 0.1rem;
   right: 0.1rem;
   color: white;
-  background-color: blue;
+  background-color: #3190e8;
 }
 #add {
   border-radius: 50%;
@@ -637,8 +646,9 @@ export default {
 }
 #right {
   float: right;
-  margin-top: 1.45rem;
+  margin-top: 22vh;
   width: 2.85rem;
+  height: 70.4vh;
   overflow: hidden;
   overflow: scroll;
   overflow: auto;
@@ -654,7 +664,7 @@ export default {
 }
 #shopcar {
   width: 100%;
-  height: 0.5rem;
+  height: 7.6vh;
   position: fixed;
   bottom: 0;
   left: 0;

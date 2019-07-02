@@ -134,6 +134,8 @@ export default {
   top: 0;
   left: 0;
   z-index: 10;
+  height: 13vh;
+  /* border: 1px solid black; */
 }
 #title > img:nth-child(1) {
   width: 0.25rem;
@@ -198,8 +200,8 @@ div p:nth-child(3) {
   color: black;
   position: fixed;
   left: 0;
-  top: 1.08rem;
-  height: 0.4rem;
+  top: 16vh;
+  height:6vh;
   line-height: 0.4rem;
   font-size: 0.19rem;
   font-weight: bold;

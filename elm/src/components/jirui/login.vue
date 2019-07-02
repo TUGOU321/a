@@ -1,30 +1,26 @@
 <template>
   <div>
-    <div class="flexhere">
-      <nav>
-        <span class="leftspan">
-          <i
-            @click="goback()"
-            class="el-icon-arrow-left"
-            style="color:white;font-size:0.3rem;width: 13%;line-height: 0.5rem;float: left;"
-          ></i>
-        </span>
-        <span class="changeCity">密码登陆</span>
-      </nav>
-    </div>
-    <input class="input" type="text" placeholder="用户" v-model="username">
-    <br>
-    <div style="width:3.75rem; background-color:white">
-      <input
-        id="psw"
-        class="input"
-        type="password"
-        placeholder="密码"
-        v-model="password"
-        v-if="!bolvalue"
-      >
-      <input id="psw" class="input" type="text" placeholder="密码" v-model="password" v-else>
-      <el-switch
+    <header
+      style="width: 100%; height: 0.5rem;font-size: 0.175rem;line-height: 0.5rem;background-color: #3190e8;color: #ffffff;text-align: center;"
+    >
+      <span class="leftspan">
+        <van-icon
+          @click="goback()"
+          name="arrow-left"
+          style="font-size:0.3rem;width: 13%;line-height: 0.5rem;float: left;"
+          color="white"
+        />
+      </span>
+      <p
+        class="tittle"
+        style="width: 87%;font-size: 0.2rem;text-align: center;font-weight: bold;"
+      >密码登陆</p>
+    </header>
+    <input style="margin-left:0.1rem;margin-top:0.1rem;width:3.65rem;height:0.5rem;"  type="text" placeholder="用户" v-model="username" />
+    <div style="overflow:hidden;margin-left:0.1rem;position: relative;margin-top:0.1rem;width:3.65rem; background-color:white">
+      <input style="width:3.75rem;height:0.5rem;" type="password" placeholder="密码" v-model="password" v-if="!bolvalue" />
+      <input style="width:3.75rem;height:0.5rem;" type="text" placeholder="密码" v-model="password" v-else />
+      <el-switch style="position: absolute;top:0.15rem;right:0.1rem;"
         class="switchbtn"
         v-model="bolvalue"
         active-color="#13ce66"
@@ -32,16 +28,16 @@
         @click="changetype()"
       >显示密码</el-switch>
     </div>
-    <br>
-    <div class="code">
-      <input type="text" placeholder="验证码" v-model="codeNumber">
-      <div class="changecode">
-        <img :src="code&&code">
-        <div @click="getCode()">换一张</div>
+    <div style="overflow:hidden;margin-left:0.1rem;position: relative;margin-top:0.1rem;width:3.65rem;height:0.5rem;">
+      <input style="width:3.75rem;height:0.5rem;" type="text" placeholder="验证码" v-model="codeNumber" />
+      <div style="line-height:0.25rem;position: absolute;right:0;top:0;display:flex;width:1.2rem;">
+    
+        <img style="width:0.5rem;"  :src="code&&code" />
+        <div  @click="getCode()"> <p>看不清?</p> <p>换一张</p></div>
       </div>
     </div>
-    <br>
-    <div :class="'loginbtn'" @click="login()">登陆</div>
+    <br />
+    <van-button  @click="login()" style="width:3.55rem;margin:0.1rem;" type="warning">登陆</van-button>
     <div style="height:0.5rem;">
       <router-link to="resetpassword">
         <div style="padding-right:0.2rem;float:right;color:blue;font-size:0.1rem;">重置密码</div>
@@ -128,72 +124,6 @@ export default {
 };
 </script>
 <style scoped>
-.flexhere {
-  width: 100%;
-}
-nav {
-  margin-bottom: 0.3rem;
-  width: 87%;
-  padding-right: 13%;
-  height: 0.5rem;
-  font-size: 0.175rem;
-  line-height: 0.5rem;
-  background-color: #3190e8;
-  color: #ffffff;
-  text-align: center;
-}
-nav img {
-  width: 13%;
-  line-height: 0.5rem;
-  float: left;
-}
-.input {
-  width: 90%;
-  margin: 0.01rem 5%;
-  height: 0.4rem;
-  border-radius: 2%;
-  border-radius: 2%;
-}
-.loginbtn {
-  width: 90%;
-  margin: 0.5rem auto;
-  height: 0.3rem;
-  background-color: yellowgreen;
-  text-align: center;
-  line-height: 0.3rem;
-  line-height: 0.3rem;
-  color: white;
-  border-radius: 2%;
-}
-.code {
-  width: 90%;
-  margin: 0.01rem 5%;
-  height: 0.4rem;
-  border-radius: 2%;
-  border-radius: 2%;
-}
-.code input {
-  height: 0.4rem;
-  width: 80%;
-}
-.changecode {
-  width: 20%;
-  height: 0.4rem;
-  float: right;
-  background-color: white;
-}
-.changecode img {
-  width: 100%;
-}
-#psw {
-  width: 70%;
-  float: left;
-}
-.switchbtn {
-  width: 10%;
-  margin-top: 0.1rem;
-  margin-right: 10%;
-  float: left;
-}
+
 </style>
 

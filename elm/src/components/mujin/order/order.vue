@@ -34,7 +34,7 @@
 </script>
 <style scoped>
 #title {
-  background-color: blue;
+  background-color: #3190e8;
   width: 3.45rem;
   font-size: 0.2rem;
   padding: 0.15rem;

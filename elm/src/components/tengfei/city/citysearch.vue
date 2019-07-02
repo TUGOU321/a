@@ -56,7 +56,7 @@
         background-color: lightgray;
     }
     #title{
-        background-color: blue;
+        background-color: #3190e8;
         padding: 0.1rem 0.08rem;
         overflow: hidden;
     }
@@ -95,7 +95,7 @@
         margin: 0 0.19rem 0.1rem;
         border: none;
         outline: none;
-        background-color: blue;
+        background-color: #3190e8;
         color: white;
         border-radius: 0.03rem;
      }
