@@ -5,7 +5,7 @@
     >
       <span class="leftspan">
         <router-link to="userinfo">
-          <van-icon @click="goback()" name="arrow-left"  style="font-size:0.3rem;width: 13%;line-height: 0.5rem;float: left;" color="white" />
+          <van-icon name="arrow-left"  style="font-size:0.3rem;width: 13%;line-height: 0.5rem;float: left;" color="white" />
         </router-link>
       </span>
       <p
@@ -56,9 +56,6 @@ export default {
     this.setUserAddress();
   },
   methods: {
-    goback() {
-      this.$router.back();
-    },
     deleteAddress(i) {
       const api =
         "https://elm.cangdu.org/v1/users/" +
