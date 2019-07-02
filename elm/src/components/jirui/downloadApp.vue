@@ -11,7 +11,7 @@
         style="width: 87%;font-size: 0.2rem;text-align: center;font-weight: bold;"
       >下载</p>
     </header>
-    <div style="width:3.75rem;text-align:center;font-size:2rem;color:#3190e8;" class="el-icon-platform-eleme"></div>
+    <div style="margin-top:0.1rem;width:3.75rem;text-align:center;font-size:2rem;color:#3190e8;"><img src="../../../static/img/eliaomo.png" alt=""></div>
     <div style="width:3.75rem;text-align:center;font-size:0.2rem;">下载饿了么app</div>
     <div style="margin-top:0.2rem;width:3.75rem;text-align:center;"><el-button @click="open()" style="width:3rem;" type="success">下载</el-button></div>
   </div>

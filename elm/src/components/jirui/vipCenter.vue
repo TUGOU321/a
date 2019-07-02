@@ -27,9 +27,9 @@
           <span style="line-height:0.5rem;float:right;color:#666666;font-size:0.14rem;">
             会员说明
             <span
-              style="padding-right:0.1rem;line-height:0.5rem;float:right;"
-              class="el-icon-arrow-right"
-            ></span>
+              style="padding-right:0.1rem;line-height:0.54rem;float:right;"
+              
+            ><van-icon name="arrow" /></span>
           </span>
         </router-link>
       </div>
@@ -86,9 +86,9 @@
         <span style="font-size:0.12rem;float:right;">
           使用卡密卡号
           <span
-            style="line-height:0.5rem;padding-right:0.1rem;float:right;"
-            class="el-icon-arrow-right"
-          ></span>
+            style="line-height:0.54rem;padding-right:0.1rem;float:right;"
+           
+          ><van-icon name="arrow" /></span>
         </span>
       </div>
     </router-link>
@@ -100,9 +100,9 @@
       <span style="font-size:0.12rem;float:right;">
         开发票
         <span
-          style="line-height:0.5rem;padding-right:0.1rem;float:right;"
-          class="el-icon-arrow-right"
-        ></span>
+          style="line-height:0.54rem;padding-right:0.1rem;float:right;"
+         
+        ><van-icon name="arrow" /></span>
       </span>
     </div>
     </router-link>

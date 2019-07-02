@@ -19,7 +19,7 @@
           <span style="float:left;padding:0.05rem 0 0.05rem 0.05rem;">当前余额</span>
           <router-link to="couponTips">
             <span style="padding:0.05rem 0.05rem 0.05rem 0;color:#3190e8;float:right;">
-              <span class="el-icon-question"></span>积分说明
+              <span><van-icon name="question" /></span>积分说明
             </span>
           </router-link>
         </div>

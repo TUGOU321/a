@@ -33,7 +33,7 @@
           style="position: absolute;top: 0.15rem;left: 1rem;font-size:0.2rem;font-weight: bold"
         >登录/注册</p>
         <span style="position: absolute;top: 0.45rem;left: 1rem;font-size:0.15rem;">
-          <span class="el-icon-mobile"></span>
+          <van-icon name="graphic" />
           <span style="font-size:0.15rem;">暂未绑定手机号</span>
         </span>
         <nav
@@ -60,7 +60,7 @@
           style="position: absolute;top: 0.45rem;left: 1rem;font-size:0.15rem;"
         >{{$store.state.userData.user_id}}</span>
         <span v-show="bol2" style="position: absolute;top: 0.45rem;left: 1rem;font-size:0.15rem;">
-          <span class="el-icon-mobile"></span>
+          <van-icon name="graphic" />
           <span style="font-size:0.15rem;">暂未绑定手机号</span>
         </span>
         <nav
