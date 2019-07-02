@@ -115,8 +115,8 @@ export default {
   /* border: 1px solid red; */
 }
 ul {
-  margin-top: 0.84rem;
-  height: 2.33rem;
+  margin-top: 0.82rem;
+  height: 2.78rem;
   /* overflow: hidden; */
   /* border: 1px solid rebeccapurple; */
 }
@@ -132,11 +132,11 @@ color: transparent; */
   display: none;
 }
 #ul1 {
-  background-color: rgb(228, 222, 222);
+  background-color: rgb(240, 240, 240);
 }
 .li1 {
-  padding-top: 0.03rem;
-  padding-bottom: 0.03rem;
+  padding-top: 0.05rem;
+  padding-bottom: 0.05rem;
 }
 .active {
   background-color: white;
@@ -145,15 +145,15 @@ color: transparent; */
   background-color: white;
 }
 #li2 {
-  padding-top: 0.045rem;
-  padding-bottom: 0.045rem;
+   padding-top: 0.07rem;
+  padding-bottom: 0.07rem;
   margin-left: 0.06rem;
   border-bottom: 1px solid gray;
 }
 #name1 {
-  font-size: 0.13rem;
+  font-size: 0.14rem;
   line-height: 0.02rem;
-  color: rgb(43, 40, 40);
+  color: rgb(37, 35, 35);
 }
 #name2 {
   font-size: 0.14rem;

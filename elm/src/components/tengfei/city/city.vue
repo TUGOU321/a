@@ -16,7 +16,7 @@
         <p>热门城市</p>
 <li v-for="(item, index) in arrHotC" :key="index">
        <router-link :to="'/citysearch?cityId=' + item.id+'&cityName='+item.name">
-            {{item.name}}
+           <span id="hotC">{{item.name}}</span>
        </router-link>
        </li>
 
@@ -130,8 +130,11 @@ export default {
 };
 </script>
 <style scoped>
+#hotC{
+  color: #3190e8;
+}
     #city{
-        background-color: lightgray;
+        background-color: rgb(248, 246, 246);
     }
     #title{
         background-color: #3190e8;
@@ -170,8 +173,8 @@ export default {
         color: #3190e8;
         font-size: 0.18rem;
         padding: 0.1rem 0.08rem;
-        border-top: 0.01rem solid gray;
-        border-bottom: 0.02rem solid gray;
+        border-top: 0.01rem solid rgb(214, 212, 212);
+        border-bottom: 0.02rem solid rgb(214, 212, 212);
     }
     #guess>img{
         width: 0.18rem;
@@ -183,7 +186,7 @@ export default {
         overflow: hidden;
     }
     #hotCity p{
-        border-top: 0.02rem solid gray; 
+        border-top: 0.02rem solid rgb(214, 212, 212); 
         padding: 0.08rem;
         font-size: 0.1rem;
     }
@@ -195,14 +198,14 @@ export default {
         font-size: 0.15rem;
         text-align: center;
         line-height: 0.35rem;
-        border-top: 0.01rem solid gray;
-        border-right: 0.01rem solid gray;
+        border-top: 0.01rem solid rgb(214, 212, 212);
+        border-right: 0.01rem solid rgb(214, 212, 212);
     }
     #hotCity li:nth-child(5),#hotCity li:nth-child(9){
         border-right:none;
     }
     #hotCity li:nth-child(9),#hotCity li:nth-child(6),#hotCity li:nth-child(7),#hotCity li:nth-child(8){
-        border-bottom: 0.01rem solid gray;
+        border-bottom: 0.01rem solid rgb(214, 212, 212);
     }
     #allCity{
         overflow: hidden;
@@ -210,15 +213,15 @@ export default {
     #allCity>ul{
         background-color:white;
         margin-top: 0.1rem;
-        border-top: 0.02rem solid  gray;
-        border-bottom: 0.01rem solid  gray;
+        border-top: 0.02rem solid  rgb(214, 212, 212);
+        border-bottom: 0.01rem solid  rgb(214, 212, 212);
     }
      #allCity>ul>p{
         font-size: 0.1rem;
         padding: 0.08rem;
      }
      #allCity>ul>p>span{
-         color: gray;
+         color: rgb(214, 212, 212);
          
      }
      #address{
@@ -232,8 +235,8 @@ export default {
         font-size: 0.15rem;
         text-align: center;
         line-height: 0.35rem;
-        border-top: 0.01rem solid gray;
-        border-right: 0.01rem solid gray;
+        border-top: 0.01rem solid rgb(214, 212, 212);
+        border-right: 0.01rem solid rgb(214, 212, 212);
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -245,6 +248,6 @@ export default {
          border-right:none;
      }
      #address>li:nth-last-child(4), #address>li:nth-last-child(3), #address>li:nth-last-child(2), #address>li:nth-last-child(1){
-         border-bottom:0.01rem solid gray;
+         border-bottom:0.01rem solid rgb(214, 212, 212);
      }
 </style>

@@ -194,13 +194,13 @@ export default {
   line-height: 0.4rem;
 }
 .ul1 > li img {
-  width: 0.2rem;
+  width: 0.17rem;
 }
 .ul1 > li > span {
   width: 3.4rem;
   /* border: 1px solid red; */
   display: inline-block;
-  border-bottom: 0.01rem solid gray;
+  border-bottom: 0.01rem solid rgb(214, 212, 212);
   /* display: flex; */
 }
 .ul1 > li > span >img{

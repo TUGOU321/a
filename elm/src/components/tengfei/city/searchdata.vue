@@ -35,17 +35,18 @@ ul{
     background-color: white;
 }
     #search{
-        border-top: 0.01rem solid gray;
+        border-top: 0.01rem solid rgb(214, 212, 212);
         padding: 0.1rem;
     }
     #search p:nth-child(1){
         font-size: 0.17rem;
-        margin-bottom: 0.1rem;
-        color: black;
+        margin-top: 0.1rem;
+        margin-bottom: 0.15rem;
+        color: rgb(105, 102, 102);
         font-weight: bold;
     }
     #search p:nth-child(2){
         font-size: 0.08rem;
-        color: gray;
+        color: rgb(190, 186, 186);
     }
 </style>

@@ -53,7 +53,7 @@
 </script>
 <style scoped>
     #all{
-        background-color: lightgray;
+        background-color: rgb(248, 246, 246);
     }
     #title{
         background-color: #3190e8;
@@ -80,14 +80,14 @@
     #search{
         background-color: white;
         margin-top: 0.1rem;
-        border-top: 0.01rem solid gray;
-        border-bottom: 0.01rem solid gray;
+        border-top: 0.01rem solid rgb(214, 212, 212);
+        border-bottom: 0.01rem solid rgb(214, 212, 212);
     }
     #search>input{
         width: 3.25rem;
         padding: 0.05rem;
         margin: 0.1rem 0.18rem;
-        border: 0.01rem solid gray;
+        border: 0.01rem solid rgb(214, 212, 212);
     }
      #search button{
         width: 3.35rem;

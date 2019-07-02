@@ -49,8 +49,6 @@ export default {
     };
   },
   created() {
-    console.log(this.$route.query); 
-    // this.datas = this.$route.query;
     console.log(this.datas);
     this.getshop();
     this.getDetail();
@@ -94,7 +92,6 @@ export default {
         method: "get",
         withCredentials: true
       }).then(res => {
-        console.log(res);
         this.detailAdd = res.data;
       });
     },
@@ -109,7 +106,6 @@ export default {
         method: "get",
         withCredentials: true
       }).then(res => {
-        console.log(res);
         this.allShop = res.data;
         loadingInstance.close();
       });
@@ -120,7 +116,8 @@ export default {
 <style scoped>
 #allShop {
   margin-top: 0.1rem;
-  border-top: 0.01rem solid gray;
+  border-top: 0.01rem solid rgb(214, 212, 212);
+  background-color: #fff;
 }
 #shop{
   color: black;

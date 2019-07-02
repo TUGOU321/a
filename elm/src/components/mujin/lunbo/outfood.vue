@@ -5,11 +5,8 @@
       <router-link to="/city">
         <span>{{$store.state.foodName}}</span>
       </router-link>
-      <router-link to="/login1">
-        <p id="login1" v-if="!disp">登陆|注册</p>
-      </router-link>
       <router-link to="/mine" >
-        <img id="me" v-if="disp" src="../../../../static/img/me.png">
+        <img id="me" src="../../../../static/img/me.png">
       </router-link>
     </div>
     <div id="lunbo">
@@ -76,17 +73,10 @@ export default {
     };
   },
   created() {
-    // console.log(this.$route.query);
-    // console.log(this.$store.state.Dlat);
    this.lolas.latitude = this.$store.state.Dlat;
    this.lolas.longitude = this.$store.state.Dlon;
     this.first();
     this.second();
-     if(this.$route.query.username){
-      this.disp=true
-    }else{
-      this.disp=false
-    }
   },
   methods: {
     first() {
@@ -118,11 +108,6 @@ export default {
 };
 </script>
 <style scoped>
-#login1{
-  color: white;
-  float: right;
-  margin-top: 0.03rem;
-}
 #form{
   border-top: 0.01rem solid gray;
   background-color: white;
@@ -169,6 +154,7 @@ export default {
 
 #lunbo {
   margin-top: 0.5rem;
+  background-color: white;
 }
 .sw1 {
   width: 3.75rem;
@@ -176,14 +162,16 @@ export default {
   justify-content: space-between;
   flex-wrap: wrap;
   padding-bottom: 0.2rem;
+  
 }
 .sw1 div {
   width: 25%;
   box-sizing: border-box;
   text-align: center;
+  padding: 0.07rem;
 }
 .img1 {
-  width: 0.6rem;
+  width: 0.5rem;
 }
 .p1 {
   color: gray;

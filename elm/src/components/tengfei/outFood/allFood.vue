@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="left" :style="{'height':divH+'px'}">
+    <div id="left" >
       <ul>
         <li
           v-for="(item, index) in datas"
@@ -85,7 +85,8 @@
                   v-if="item.is_featured>0 && !item.specfoods[1]"
                   id="featured2"
                 >{{item.is_featured}}</span>
-                <p v-if="!item.specfoods[1]" id="add" @click.stop="add1(i,j)">+</p>
+                <p v-if="!item.specfoods[1]" id="add" @click.stop="add1(i,j,$event)">+</p>
+                <div class="ball"></div>
               </div>
             </li>
           </ul>
@@ -109,7 +110,7 @@
       </ul>
     </div>
     <div id="shopcar">
-      <p id="car" @click="show3=!show3">
+      <p class="car" :class="{'car1': num >0}" @click="show3=!show3">
         <img src="../../../../static/img/shopcar.png" alt />
         <span id="count" v-if="num>0">{{num}}</span>
       </p>
@@ -128,6 +129,7 @@
 <script>
 import { fail } from "assert";
 import { Loading } from "element-ui";
+
 let loadingInstance;
 export default {
   name: "allFood",
@@ -236,12 +238,21 @@ export default {
       this.show1 = true;
       this.show2 = true;
     },
-    add1(a, b) {
+    add1(a, b, evt) {
       this.$store.commit("getindex", {
         a: a,
         b: b
       });
       this.cou++;
+      var $ball = document.getElementsByClassName("ball");
+      $ball[b].style.top = evt.pageY + "px";
+      $ball[b].style.left = evt.pageX + "px";
+      $ball[b].style.transition = "left 0s, top 0s";
+      setTimeout(() => {
+        $ball[b].style.top = window.innerHeight + "px";
+        $ball[b].style.left = "0px";
+        $ball[b].style.transition = "left 1s linear, top 1s ease-in";
+      }, 20);
     },
     delle(a, b) {
       this.$store.commit("getdele", {
@@ -287,6 +298,18 @@ export default {
 };
 </script>
 <style scoped>
+
+.ball {
+  width: 17px;
+  height: 17px;
+  background: #3190e8;
+  border-radius: 50%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transition: left 1s linear, top 1s ease-in;
+}
 #bc {
   width: 3.75rem;
   height: 70.4vh;
@@ -501,7 +524,7 @@ export default {
 }
 .dian {
   float: right;
-  background-color: lightgray;
+  background-color: rgb(244, 242, 242);
 }
 .item {
   /* margin: 0.2rem; */
@@ -519,13 +542,13 @@ export default {
   overflow: hidden;
   overflow: scroll;
   overflow: auto;
-  background-color: lightgray;
+  background-color: rgb(244, 242, 242);
 }
 #left ul li {
   height: 0.6rem;
   line-height: 0.6rem;
   font-size: 0.16rem;
-  border-bottom: 0.01rem solid gray;
+  border-bottom: 0.01rem solid rgb(214, 212, 212);
   padding-left: 0.03rem;
 }
 #left ul li a {
@@ -533,7 +556,7 @@ export default {
 }
 .top {
   padding: 0.17rem 0.12rem;
-  background-color: lightgray;
+ background-color: rgb(244, 242, 242);;
 }
 .top > span:first-child {
   font-size: 0.18rem;
@@ -623,6 +646,7 @@ export default {
   border: 0.01rem solid red;
   width: 0.35rem;
   text-align: center;
+  font-size: 0.15rem;
   border-radius: 0.03rem;
 }
 #add,
@@ -675,7 +699,7 @@ export default {
   background-color: rgba(0, 0, 0, 1);
   z-index: 150;
 }
-#car {
+.car {
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.7);
   border: 0.02rem solid gray;
@@ -684,7 +708,10 @@ export default {
   margin-left: 0.1rem;
   margin-top: -0.1rem;
 }
-#car > img {
+.car1{
+  background-color:#3190e8;
+}
+.car > img {
   width: 0.35rem;
 }
 #money1 {

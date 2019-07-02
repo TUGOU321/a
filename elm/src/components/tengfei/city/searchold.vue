@@ -49,8 +49,8 @@ import { fail } from 'assert';
 <style scoped>
   #old{
     font-size: 0.15rem;
-    border-top: 0.01rem solid gray;
-    border-bottom: 0.01rem solid gray;
+    border-top: 0.01rem solid rgb(214, 212, 212);
+    border-bottom: 0.01rem solid rgb(214, 212, 212);
     padding: 0.08rem 0 0.08rem 0.08rem;
   }
   #clear{
@@ -61,16 +61,18 @@ import { fail } from 'assert';
   }
   li{
     background-color: white;
-    border-top: 0.01rem solid gray;
-    border-bottom: 0.01rem solid gray;
+    border-top: 0.01rem solid rgb(214, 212, 212);
+    border-bottom: 0.01rem solid rgb(214, 212, 212);
   }
   li p:first-child{
     font-size: 0.19rem;
     font-weight: bold;
     margin: 0.1rem 0 0.05rem 0.1rem;
+    color: rgb(105, 102, 102);
   }
   li p:last-child{
     font-size: 0.14rem;
      margin: 0.1rem 0 0.1rem 0.1rem;
+     color: rgb(190, 186, 186);
   }
 </style>

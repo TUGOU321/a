@@ -272,7 +272,7 @@ export default {
 </script>
 <style scoped>
 #all{
-  background-color: rgb(207, 204, 204);
+   background-color: rgb(235, 235, 235);
 }
 #ul1 {
   margin-top: 0.84rem;
@@ -325,12 +325,15 @@ li > span {
   border-radius: 0.06rem;
   font-size: 0.16rem;
   margin-top: 0.05rem;
+  margin-bottom: 0.1rem;
+  border: none;
 }
 .anniu1 {
   background-color: #fff;
 }
 .anniu2 {
-  background-color: green;
+  background-color: rgb(71, 185, 71);
   color: #fff;
+
 }
 </style>
