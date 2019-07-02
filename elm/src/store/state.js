@@ -1,0 +1,21 @@
+export default{
+    allFoods:[],
+    totalPrice:0,
+    shopID:0,
+    Dlat:"",
+    Dlon:"",
+    userData:"",
+    userName:"",
+    userAddress:"",
+    foundAddress:"sanhannn",
+    serviceCenterinfo:"",
+    boll:false,
+    boll2:false,
+    id:4,
+    latitude:"",
+    longitude:"",
+    foodName:"",
+    latA:"",
+    lonA:"",
+    show:true
+}
