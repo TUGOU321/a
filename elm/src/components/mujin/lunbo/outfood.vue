@@ -175,5 +175,6 @@ export default {
 }
 .p1 {
   color: gray;
+  font-size: 0.15rem;
 }
 </style>
