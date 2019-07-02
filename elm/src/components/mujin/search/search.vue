@@ -70,6 +70,8 @@
 </template>
 
 <script>
+import { Loading } from 'element-ui';
+let loadingInstance;
 export default {
   name: "search",
   data() {
@@ -99,6 +101,12 @@ export default {
     // console.log(this.record);
     this.show = this.$route.query.show;
     // console.log(this.show);
+     loadingInstance = Loading.service({
+            fullscreen:true,
+            background:"rgba(255, 255, 255, 0.5)",
+            text:"加载中...",
+            spinner:"el-icon-loading"
+        }); 
   },
   watch: {
     msg: function(N, O) {
@@ -176,6 +184,7 @@ export default {
         }
         this.show = false;
         console.log(this.show);
+        loadingInstance.close();
       });
     }
   }

@@ -167,7 +167,7 @@ export default {
     // }
     loadingInstance = Loading.service({
       fullscreen: true,
-      background: "#F2F6FC",
+      background:"rgba(255, 255, 255, 0.8)",
       text: "加载中...",
       spinner: "el-icon-loading"
     });
