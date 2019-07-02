@@ -118,7 +118,7 @@
         <img src="../../../static/img/orderF.png" style="position: absolute;left:0.15rem;height:0.2rem;padding-top: 0.1rem;padding-bottom: 0.1rem;padding-right:0;color:#3190e8;font-size:0.2rem;" name="weapp-nav" />
         <div
           style="position: absolute;left:0.4rem;heidht:0.2rem;line-height:0.4rem;font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.16rem;"
-        >我的订单</div>
+         @click="dingdan()">我的订单</div>
         <van-icon color="gray" style="position: absolute;right:0.15rem;line-height:0.4rem;color:gray;float:right;font-size:0.2rem;" name="arrow" />
         <!-- <span
           style="color:gray;float:right;line-height: 0.35rem;font-size:0.2rem;"
@@ -245,6 +245,11 @@ export default {
     }
   },
   methods: {
+    dingdan(){
+      this.$router.push({
+        name:"order"
+      })
+    },
     back(){
       this.$router.back();
     },
