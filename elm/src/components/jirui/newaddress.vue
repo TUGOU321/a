@@ -56,6 +56,9 @@ export default {
     this.landmark = this.$store.state.foundAddress;
   },
   methods: {
+    goback(){
+this.$router.back();
+    },
       getCode() {
       const api = "https://elm.cangdu.org/v1/users/:user_id/addresses";
       this.$http({
