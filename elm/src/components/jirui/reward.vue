@@ -16,7 +16,7 @@
       <span>个红包即将到期</span>
     </span>
     <span style="padding:0.05rem 0.05rem 0.05rem 0;color:#3190e8;float:right;">
-      <span style="font-size:0.15rem;" class="el-icon-question"></span>
+      <span style="font-size:0.15rem;"><van-icon name="question" /></span>
       <router-link to="rewardTips">
         <span style="line-height:0.3rem;font-size:0.03rem;margin:0.02rem 0.1rem 0  0;">红包说明</span>
       </router-link>
@@ -56,7 +56,7 @@
       <router-link to="expiredHongbaos">
         <span>查看历史红包</span>
       </router-link>
-      <span class="el-icon-arrow-right"></span>
+      <span><van-icon name="arrow" /></span>
     </div>
     <div
       style="background-color:white;height:0.5rem;width:3.75rem;display:flex;position: fixed;bottom:0;"

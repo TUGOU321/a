@@ -37,9 +37,9 @@
           <span style="font-size:0.15rem;">暂未绑定手机号</span>
         </span>
         <nav
-          class="el-icon-arrow-right"
+          
           style="line-height:0.8rem;float:right;font-size:0.2rem;font-weight: bold;"
-        ></nav>
+        ><van-icon name="arrow" /></nav>
       </div>
     </router-link>
     <router-link to="userinfo" v-show="boll">
@@ -64,9 +64,9 @@
           <span style="font-size:0.15rem;">暂未绑定手机号</span>
         </span>
         <nav
-          class="el-icon-arrow-right"
+         
           style="line-height:0.8rem;float:right;font-size:0.2rem;font-weight: bold;"
-        ></nav>
+        ><van-icon name="arrow" /></nav>
       </div>
     </router-link>
     <div
