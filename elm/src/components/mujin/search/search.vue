@@ -258,16 +258,16 @@ export default {
   font-size: 0.16rem;
   font-weight: bold;
   padding: 0.06rem;
-  margin: 0.06rem;
+  margin:  0.06rem 0 0.06rem 0.06rem;
   border-radius: 0.04rem;
   background-color: rgb(241, 232, 232);
 }
 #submit {
   background-color: #3190e8;
   color: white;
-  float: right;
-  margin-top: 0.08rem;
-  margin-right: 0.07rem;
+  position: absolute;
+  top: 0.08rem;
+  right: 0.03rem;
   padding-left: 0.15rem;
   padding-right: 0.15rem;
   padding-top: 0.05rem;
