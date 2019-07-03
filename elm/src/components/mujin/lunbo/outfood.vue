@@ -168,7 +168,7 @@ export default {
   width: 25%;
   box-sizing: border-box;
   text-align: center;
-  padding: 0.07rem;
+  /* padding: 0.07rem; */
 }
 .img1 {
   width: 0.5rem;
