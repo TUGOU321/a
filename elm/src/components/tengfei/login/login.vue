@@ -128,7 +128,7 @@ export default {
 </script>
 <style scoped>
 #title {
-  background-color: blue;
+  background-color: #3190e8;
   padding: 0.1rem;
 }
 #title > img {
