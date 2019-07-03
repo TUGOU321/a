@@ -4,10 +4,10 @@
       <ul id="ul1">
         <li
           class="li1"
-          @click="getClass(v,i)"
+          
           :key="i"
           v-for="(v,i) in datas"
-          :class="{ active:i==isActive && show1,active2:tit == v.name && show}"
+          :class="{ active:i==isActive && show1,active2:tit == v.name && show}" @click="getClass(v,i)"
         >
           <img id="img1" :src="'https://fuss10.elemecdn.com/'+v.image_url+'.png'" alt>
           <img id="img2" :src="'https://fuss10.elemecdn.com/'+v.image_url+'.jpeg'" alt>
