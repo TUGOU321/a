@@ -24,8 +24,8 @@
         <div
           style="position: absolute;right:0;top:0;line-height:0.8rem;margin-right:0.1rem;"
           @click="deleteAddress(i)"
-          class="el-icon-delete"
-        ></div>
+          
+        ><van-icon name="delete" /></div>
         <div>{{v.phone_bk}}</div>
         </div>
       </li>
@@ -37,8 +37,8 @@
         >新增地址</span>
         <span
           style="color:#B0C4DE;float:right;line-height: 0.5rem;font-size:0.2rem;"
-          class="el-icon-arrow-right"
-        ></span>
+          
+        ><van-icon name="arrow" /></span>
       </nav>
     </router-link>
     <!-- {{this.$store.state.userAddress}} -->

@@ -50,12 +50,12 @@
       </router-link>
     </nav>
     <router-link to="editaddress">
-      <nav style="background-color:white;margin-bottom:0.02rem;height:0.5rem;">
+      <nav style="position: relative;background-color:white;margin-bottom:0.02rem;height:0.5rem;">
         <span
           style="line-height:0.5rem;padding-left:0.15rem;padding-top: 0.1rem;padding-bottom: 0.1rem;font-family: Arial, Helvetica, sans-serif;color:#333333;font-size:0.14rem;"
         >收货地址</span>
         <span
-          style="color:#B0C4DE;float:right;line-height: 0.54rem;font-size:0.2rem;"
+          style="position: absolute;right:0;color:#B0C4DE;float:right;line-height: 0.54rem;font-size:0.2rem;"
           
         ><van-icon name="arrow" /></span>
       </nav>

@@ -37,7 +37,7 @@
       </div>
     </div>
     <br />
-    <van-button  @click="login()" style="width:3.55rem;margin:0.1rem;" type="warning">登陆</van-button>
+    <van-button  @click="login()" style="width:3.55rem;margin:0.1rem;" type="primary">登陆</van-button>
     <div style="height:0.5rem;">
       <router-link to="resetpassword">
         <div style="padding-right:0.2rem;float:right;color:blue;font-size:0.1rem;">重置密码</div>
